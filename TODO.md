@@ -1,6 +1,6 @@
 # Todo list
 
-- [ ] Initialization
+- [x] Initialization
 - [ ] Background rendering
 - [ ] Sprite rendering
 - [ ] Text rendering
