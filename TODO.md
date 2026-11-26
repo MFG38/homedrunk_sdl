@@ -1,7 +1,7 @@
 # Todo list
 
 - [x] Initialization
-- [ ] Background rendering
+- [x] Background rendering
 - [ ] Sprite rendering
 - [ ] Text rendering
 - [ ] Game state
