@@ -6,9 +6,6 @@
 static SDL_Window *window = NULL;
 static SDL_Renderer *renderer = NULL;
 
-char *gfx_path = NULL;
-char *spr_path = NULL;
-
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
 {
     SDL_SetAppMetadata("HOMEdRUNk", "1.0", "com.mfg38.homedrunk");
