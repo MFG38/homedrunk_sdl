@@ -3,10 +3,11 @@
 #include <SDL3/SDL_main.h>
 #include <SDL3/SDL_render.h>
 
+#include "drawfuncs.h"
 #include "gamestate.h"
 
-static SDL_Window *window = NULL;
-static SDL_Renderer *renderer = NULL;
+SDL_Window *window = NULL;
+SDL_Renderer *renderer = NULL;
 
 static GameState gstate;
 
@@ -24,6 +25,10 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
         return SDL_APP_FAILURE;
     }
     SDL_SetRenderLogicalPresentation(renderer, 384, 512, SDL_LOGICAL_PRESENTATION_INTEGER_SCALE);
+
+    gstate = GS_TITLE;
+
+    LoadGraphic("titlelogo.png");
 
     return SDL_APP_CONTINUE;
 }
