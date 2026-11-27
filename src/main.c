@@ -9,6 +9,8 @@
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 
+static SDL_Texture* gfx_title;
+
 static GameState gstate;
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
@@ -28,7 +30,7 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
 
     gstate = GS_TITLE;
 
-    LoadGraphic("titlelogo.png");
+    gfx_title = LoadGraphic("titlelogo.png");
 
     return SDL_APP_CONTINUE;
 }
@@ -52,5 +54,8 @@ SDL_AppResult SDL_AppIterate(void *appstate)
     return SDL_APP_CONTINUE;
 }
 
-void SDL_AppQuit(void *appstate, SDL_AppResult result) {}
+void SDL_AppQuit(void *appstate, SDL_AppResult result)
+{
+    SDL_DestroyTexture(gfx_title);
+}
 
