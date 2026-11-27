@@ -3,8 +3,12 @@
 #include <SDL3/SDL_main.h>
 #include <SDL3/SDL_render.h>
 
+#include "gamestate.h"
+
 static SDL_Window *window = NULL;
 static SDL_Renderer *renderer = NULL;
+
+static GameState gstate;
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
 {

@@ -6,6 +6,6 @@ typedef enum {
     GS_INGAME,
     GS_LOSE,
     GS_WIN
-} gameState;
+} GameState;
 
 #endif
